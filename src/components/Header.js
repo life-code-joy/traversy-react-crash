@@ -3,13 +3,19 @@ import PropTypes from 'prop-types';
 const Header = ({ title }) => {
   return (
     <header>
-      <h1>{title}</h1>
+      <h1 style={{ color: 'red', backgroundColor: 'yellow' }}>{title}</h1>
+      <h2 style={headingTwoStyle}>{title}</h2>
     </header>
   );
 };
 
+const headingTwoStyle = {
+  color: 'grey',
+  fontSize: '3rem',
+};
+
 Header.defaultProps = {
-  title: 'Trace Tracker',
+  title: 'Trace Tracker for you',
 };
 
 Header.propTypes = {
